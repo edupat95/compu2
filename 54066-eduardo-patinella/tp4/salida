@@ -1,0 +1,256 @@
+31513 execve("./servidor", ["./servidor"], [/* 71 vars */]) = 0
+31513 brk(NULL)                         = 0xb47000
+31513 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+31513 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+31513 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+31513 fstat(3, {st_mode=S_IFREG|0644, st_size=106989, ...}) = 0
+31513 mmap(NULL, 106989, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f5c0cb02000
+31513 close(3)                          = 0
+31513 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+31513 open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+31513 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\t\2\0\0\0\0\0"..., 832) = 832
+31513 fstat(3, {st_mode=S_IFREG|0755, st_size=1868984, ...}) = 0
+31513 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f5c0cb01000
+31513 mmap(NULL, 3971488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f5c0c52e000
+31513 mprotect(0x7f5c0c6ee000, 2097152, PROT_NONE) = 0
+31513 mmap(0x7f5c0c8ee000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x7f5c0c8ee000
+31513 mmap(0x7f5c0c8f4000, 14752, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f5c0c8f4000
+31513 close(3)                          = 0
+31513 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f5c0cb00000
+31513 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f5c0caff000
+31513 arch_prctl(ARCH_SET_FS, 0x7f5c0cb00700) = 0
+31513 mprotect(0x7f5c0c8ee000, 16384, PROT_READ) = 0
+31513 mprotect(0x601000, 4096, PROT_READ) = 0
+31513 mprotect(0x7f5c0cb1d000, 4096, PROT_READ) = 0
+31513 munmap(0x7f5c0cb02000, 106989)    = 0
+31513 socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 3
+31513 setsockopt(3, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+31513 bind(3, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("0.0.0.0")}, 16) = 0
+31513 listen(3, 5)                      = 0
+31513 rt_sigaction(SIGCHLD, {SIG_IGN, [CHLD], SA_RESTORER|SA_RESTART, 0x7f5c0c5634b0}, {SIG_DFL, [], 0}, 8) = 0
+31513 accept(3, NULL, NULL)             = 4
+31513 clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f5c0cb009d0) = 31525
+31513 close(4 <unfinished ...>
+31525 read(4,  <unfinished ...>
+31513 <... close resumed> )             = 0
+31525 <... read resumed> "http://www.um.edu.ar/es/ua/fi.ht"..., 1000) = 45
+31513 accept(3,  <unfinished ...>
+31525 write(1, "http://www.um.edu.ar/es/ua/fi.ht"..., 45) = 45
+31525 fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 7), ...}) = 0
+31525 brk(NULL)                         = 0xb47000
+31525 brk(0xb68000)                     = 0xb68000
+31525 write(1, "\n", 1)                 = 1
+31525 write(1, "link ->> http://www.um.edu.ar/es"..., 44) = 44
+31525 write(1, "palabra ->> Tel\303\251fonos\177\n", 24) = 24
+31525 write(1, "url -> www.um.edu.ar\n", 21) = 21
+31525 write(1, "anclaa-> /es/ua/fi.html \n", 25) = 25
+31525 write(1, "anclab->  \n", 11)      = 11
+31525 write(1, "tam url: 13\n", 12)     = 12
+31525 write(1, "tam ancla: 14\n", 14)   = 14
+31525 write(1, "tam oracion: 67\n", 16) = 16
+31525 write(1, "oracion:\n", 9)         = 9
+31525 write(1, "GET  HTTP/1.1\nHost: www.um.edu.a"..., 53) = 53
+31525 write(1, " \n", 2)                = 2
+31525 write(1, "-----------------\n", 18) = 18
+31525 write(1, "GET /es/ua/fi.html HTTP/1.1\nHost"..., 66) = 66
+31525 write(1, "\n", 1)                 = 1
+31525 socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 5
+31525 open("/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 6
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=189, ...}) = 0
+31525 read(6, "# Dynamic resolv.conf(5) file fo"..., 4096) = 189
+31525 read(6, "", 4096)                 = 0
+31525 close(6)                          = 0
+31525 stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=189, ...}) = 0
+31525 open("/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 6
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=189, ...}) = 0
+31525 read(6, "# Dynamic resolv.conf(5) file fo"..., 4096) = 189
+31525 read(6, "", 4096)                 = 0
+31525 close(6)                          = 0
+31525 socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 6
+31525 connect(6, {sa_family=AF_LOCAL, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+31525 close(6)                          = 0
+31525 socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 6
+31525 connect(6, {sa_family=AF_LOCAL, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+31525 close(6)                          = 0
+31525 open("/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 6
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=529, ...}) = 0
+31525 read(6, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 529
+31525 read(6, "", 4096)                 = 0
+31525 close(6)                          = 0
+31525 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 6
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=106989, ...}) = 0
+31525 mmap(NULL, 106989, PROT_READ, MAP_PRIVATE, 6, 0) = 0x7f5c0cb02000
+31525 close(6)                          = 0
+31525 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+31525 open("/lib/x86_64-linux-gnu/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 6
+31525 read(6, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260!\0\0\0\0\0\0"..., 832) = 832
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=47600, ...}) = 0
+31525 mmap(NULL, 2168600, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x7f5c0c31c000
+31525 mprotect(0x7f5c0c327000, 2093056, PROT_NONE) = 0
+31525 mmap(0x7f5c0c526000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0xa000) = 0x7f5c0c526000
+31525 mmap(0x7f5c0c528000, 22296, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f5c0c528000
+31525 close(6)                          = 0
+31525 mprotect(0x7f5c0c526000, 4096, PROT_READ) = 0
+31525 munmap(0x7f5c0cb02000, 106989)    = 0
+31525 open("/etc/host.conf", O_RDONLY|O_CLOEXEC) = 6
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=92, ...}) = 0
+31525 read(6, "# The \"order\" line is only used "..., 4096) = 92
+31525 read(6, "", 4096)                 = 0
+31525 close(6)                          = 0
+31525 open("/etc/hosts", O_RDONLY|O_CLOEXEC) = 6
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=232, ...}) = 0
+31525 read(6, "127.0.0.1\tlocalhost\n127.0.1.1\ted"..., 4096) = 232
+31525 read(6, "", 4096)                 = 0
+31525 close(6)                          = 0
+31525 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 6
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=106989, ...}) = 0
+31525 mmap(NULL, 106989, PROT_READ, MAP_PRIVATE, 6, 0) = 0x7f5c0cb02000
+31525 close(6)                          = 0
+31525 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+31525 open("/lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2", O_RDONLY|O_CLOEXEC) = 6
+31525 read(6, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\v\0\0\0\0\0\0"..., 832) = 832
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=10480, ...}) = 0
+31525 mmap(NULL, 2105544, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x7f5c0c119000
+31525 mprotect(0x7f5c0c11b000, 2093056, PROT_NONE) = 0
+31525 mmap(0x7f5c0c31a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x1000) = 0x7f5c0c31a000
+31525 close(6)                          = 0
+31525 mprotect(0x7f5c0c31a000, 4096, PROT_READ) = 0
+31525 munmap(0x7f5c0cb02000, 106989)    = 0
+31525 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 6
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=106989, ...}) = 0
+31525 mmap(NULL, 106989, PROT_READ, MAP_PRIVATE, 6, 0) = 0x7f5c0cb02000
+31525 close(6)                          = 0
+31525 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+31525 open("/lib/x86_64-linux-gnu/libnss_dns.so.2", O_RDONLY|O_CLOEXEC) = 6
+31525 read(6, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\17\0\0\0\0\0\0"..., 832) = 832
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=27000, ...}) = 0
+31525 mmap(NULL, 2121944, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x7f5c0bf12000
+31525 mprotect(0x7f5c0bf17000, 2097152, PROT_NONE) = 0
+31525 mmap(0x7f5c0c117000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x5000) = 0x7f5c0c117000
+31525 close(6)                          = 0
+31525 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+31525 open("/lib/x86_64-linux-gnu/libresolv.so.2", O_RDONLY|O_CLOEXEC) = 6
+31525 read(6, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P9\0\0\0\0\0\0"..., 832) = 832
+31525 fstat(6, {st_mode=S_IFREG|0644, st_size=101200, ...}) = 0
+31525 mmap(NULL, 2206280, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x7f5c0bcf7000
+31525 mprotect(0x7f5c0bd0e000, 2097152, PROT_NONE) = 0
+31525 mmap(0x7f5c0bf0e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x17000) = 0x7f5c0bf0e000
+31525 mmap(0x7f5c0bf10000, 6728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f5c0bf10000
+31525 close(6)                          = 0
+31525 mprotect(0x7f5c0bf0e000, 4096, PROT_READ) = 0
+31525 mprotect(0x7f5c0c117000, 4096, PROT_READ) = 0
+31525 munmap(0x7f5c0cb02000, 106989)    = 0
+31525 stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=189, ...}) = 0
+31525 socket(PF_INET, SOCK_DGRAM|SOCK_NONBLOCK, IPPROTO_IP) = 6
+31525 connect(6, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.1.1")}, 16) = 0
+31525 poll([{fd=6, events=POLLOUT}], 1, 0) = 1 ([{fd=6, revents=POLLOUT}])
+31525 sendto(6, "W\370\1\0\0\1\0\0\0\0\0\0\3www\2um\3edu\2ar\0\0\1\0\1", 31, MSG_NOSIGNAL, NULL, 0) = 31
+31525 poll([{fd=6, events=POLLIN}], 1, 5000) = 1 ([{fd=6, revents=POLLIN}])
+31525 ioctl(6, FIONREAD, [183])         = 0
+31525 recvfrom(6, "W\370\205\200\0\1\0\1\0\4\0\4\3www\2um\3edu\2ar\0\0\1\0\1\300"..., 1024, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.1.1")}, [16]) = 183
+31525 close(6)                          = 0
+31525 connect(5, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("192.168.1.247")}, 16) = 0
+31525 write(5, "GET /es/ua/fi.html HTTP/1.1\nHost"..., 67) = 67
+31525 read(5, "HTTP/1.1 200 OK\r\nDate: Tue, 16 O"..., 1000) = 1000
+31525 write(4, "15\00004:54 GMT\r\nServer: Apache/2.2"..., 1000) = 1000
+31525 write(4, "04\00054 GMT\r\nServer: Apache/2.2.16"..., 1000) = 1000
+31525 write(4, "54\0GMT\r\nServer: Apache/2.2.16 (D"..., 1000) = 1000
+31525 write(4, "GMT\r\0Server: Apache/2.2.16 (Debi"..., 1000) = 1000
+31525 write(4, "Server\0 Apache/2.2.16 (Debian)\r\n"..., 1000) = 1000
+31525 write(4, "Apache/2.2.16\0(Debian)\r\nX-Powere"..., 1000) = 1000
+31525 write(4, "(Debian)\r\0X-Powered-By: PHP/5.3."..., 1000) = 1000
+31525 write(4, "X-Powered-By\0 PHP/5.3.3-7+squeez"..., 1000) = 1000
+31525 write(4, "PHP/5.3.3-7+squeeze15\r\0P3P: CP=\""..., 1000) = 1000
+31525 write(4, "P3P\0 CP=\"NOI ADM DEV PSAi COM NA"..., 1000) = 1000
+31525 write(1, "2018 \n", 6)            = 6
+31525 read(5, "lic,400italic' rel='stylesheet' "..., 1000) = 1000
+31525 read(5, "ss\" type=\"text/css\" />\n  <link r"..., 1000) = 1000
+31525 read(5, "yle type=\"text/css\">\n.orbit-bull"..., 1000) = 1000
+31525 read(5, ", s);\n\302\240 })();\n\n</script>\n\n<!-- "..., 1000) = 1000
+31525 read(5, "eight:65px; width:264px; margin:"..., 1000) = 1000
+31525 read(5, "Twitter\" target=\"_blank\"></a></d"..., 1000) = 1000
+31525 read(5, "ab\",reposition:0})})();</script>"..., 1000) = 1000
+31525 read(5, "ear:both; height:15px;\"></div>\n "..., 1000) = 1000
+31525 read(5, "------------------------------->"..., 1000) = 1000
+31525 read(5, ";\"><a href=\"/es/noticias/2-fi/54"..., 1000) = 1000
+31525 read(5, " de Mendoza, quien fue invitado "..., 1000) = 1000
+31525 read(5, "Ingenier\303\255a Industrial COINI 201"..., 1000) = 1000
+31525 read(5, "t=\"220\" border=\"0\" alt=\"Conferen"..., 1000) = 1000
+31525 read(5, "             \t\t\t\t\t              "..., 1000) = 1000
+31525 read(5, "ght:200px;\"><a href=\"/es/noticia"..., 1000) = 1000
+31525 read(5, "--------------------------------"..., 1000) = 1000
+31525 read(5, ">\n        <div style=\"position:a"..., 1000) = 1000
+31525 read(5, "table></div>\n        <div style="..., 1000) = 1000
+31525 read(5, "ble></div>\n        <div style=\"p"..., 1000) = 1000
+31525 read(5, "licaciones Web</td></tr></table>"..., 1000) = 1000
+31525 read(5, "style=\"padding:20px; padding-top"..., 1000) = 1000
+31525 read(5, "onPrincipalIngenieria12\">\n      "..., 1000) = 1000
+31525 read(5, "iv>\n\t\t        <div style=\"positi"..., 1000) = 1000
+31525 write(4, "\"\0class=\"botonPrincipalIngenieri"..., 1000) = 1000
+31525 write(4, "class=\"botonPrincipalIngenieria\""..., 1000) = 1000
+31525 write(4, "<div><table\0cellpadding=\"0\" cell"..., 1000) = 1000
+31525 write(4, "cellpadding=\"0\"\0cellspacing=\"0\" "..., 1000) = 1000
+31525 write(4, "cellspacing=\"0\"\0border=\"0\" heigh"..., 1000) = 1000
+31525 write(4, "border=\"0\"\0height=\"120\" width=\"1"..., 1000) = 1000
+31525 write(4, "height=\"120\"\0width=\"100%\"><tr><t"..., 1000) = 1000
+31525 write(4, "width=\"100%\"><tr><td\0valign=\"bot"..., 1000) = 1000
+31525 write(4, "valign=\"bottom\"\0style=\"padding:2"..., 1000) = 1000
+31525 write(4, "style=\"padding\00020px; padding-top"..., 1000) = 1000
+31525 write(1, "relative \n", 10)       = 10
+31525 read(5, "------------------->\n    <!--BLO"..., 1000) = 1000
+31525 read(5, "    <div><table cellpadding=\"0\" "..., 1000) = 1000
+31525 read(5, "botonSecundarioIngenieria4\">\n   "..., 1000) = 1000
+31525 read(5, "       <div style=\"clear:both; h"..., 1000) = 1000
+31525 read(5, "oSlider2\">Estudi\303\241 un idioma en "..., 1000) = 1000
+31525 write(4, "<div\0class=\"contenidoSlider2\">  "..., 1000) = 1000
+31525 write(4, "class=\"contenidoSlider2\">\0  Comi"..., 1000) = 1000
+31525 write(4, "Comienzan\0en Mayo los cursos de "..., 1000) = 1000
+31525 write(4, "en\0Mayo los cursos de idiomas (I"..., 1000) = 1000
+31525 write(4, "Mayo\0los cursos de idiomas (Ingl"..., 1000) = 1000
+31525 write(4, "los\0cursos de idiomas (Ingl\303\251s, "..., 1000) = 1000
+31525 write(4, "cursos\0de idiomas (Ingl\303\251s, Fran"..., 1000) = 1000
+31525 write(4, "de\0idiomas (Ingl\303\251s, Franc\303\251s, P"..., 1000) = 1000
+31525 write(4, "idiomas\0(Ingl\303\251s, Franc\303\251s, Port"..., 1000) = 1000
+31525 write(4, "(Ingl\303\251s\0 Franc\303\251s, Portugu\303\251s e"..., 1000) = 1000
+31525 write(1, "UM</div> \n", 10)       = 10
+31525 read(5, "n el exterior. Encontr\303\241 toda la"..., 1000) = 1000
+31525 read(5, "             </div>\n            "..., 1000) = 1000
+31525 read(5, "v style=\"float:left;\"><a href=\"/"..., 1000) = 1000
+31525 read(5, "r:'){document.getElementById('mo"..., 1000) = 1000
+31525 read(5, "    </div>\n        <div style=\"f"..., 1000) = 1000
+31525 read(5, "div class=\"bloqueContacto\">\n    "..., 1000) = 1000
+31525 read(5, "          </optgroup>\n          "..., 1000) = 1000
+31525 read(5, "alue=\"comunicacion@um.edu.ar---B"..., 1000) = 1000
+31525 read(5, "\303\251cnico en Desarrollo de Aplicac"..., 1000) = 1000
+31525 read(5, "cacion@um.edu.ar---Licenciatura "..., 1000) = 1000
+31525 write(4, "de\0Negocios\">Licenciatura en Adm"..., 1000) = 1000
+31525 write(4, "Negocios\">Licenciatura\0en Admini"..., 1000) = 1000
+31525 write(4, "en\0Administraci\303\263n de Negocios</"..., 1000) = 1000
+31525 write(4, "Administraci\303\263n\0de Negocios</opt"..., 1000) = 1000
+31525 write(4, "de\0Negocios</option>\n           "..., 1000) = 1000
+31525 write(4, "Negocios</option>\0              "..., 1000) = 1000
+31525 write(4, "</optgroup>\0                <opt"..., 1000) = 1000
+31525 write(4, "<optgroup\0label=\"Sede San Rafael"..., 1000) = 1000
+31525 write(4, "label=\"Sede\0San Rafael\">\n       "..., 1000) = 1000
+31525 write(4, "San\0Rafael\">\n                   "..., 1000) = 1000
+31525 write(1, "Administraci\303\263n \n", 17) = 17
+31525 read(5, ".edu.ar---Ingenier\303\255a en Inform\303"..., 1000) = 1000
+31525 read(5, "e='formulario2Activo';}\" onblur="..., 1000) = 1000
+31525 read(5, "mulario2Activo';}\" onblur=\"if(th"..., 1000) = 1000
+31525 read(5, "('email').value==''){alert('Por "..., 1000) = 1000
+31525 read(5, "ment.getElementById('ubicacion')"..., 1000) = 1000
+31525 read(5, "ar\"></a></div>\n        </div>\n  "..., 1000) = 1000
+31525 read(5, " 845632174;\n\tvar google_conversi"..., 1000) = 1000
+31525 read(5, "marketingsetup.\n\t---------------"..., 1000) = 631
+31525 read(5, "0\r\n\r\n", 1000)        = 5
+31525 read(5, "", 1000)                 = 0
+31525 exit_group(0)                     = ?
+31525 +++ exited with 0 +++
+31513 <... accept resumed> NULL, NULL)  = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+31513 accept(3, NULL, NULL)             = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+31513 --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+31513 accept(3, NULL, NULL)             = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+31513 --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+31513 accept(3, NULL, NULL)             = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+31513 --- SIGINT {si_signo=SIGINT, si_code=SI_KERNEL} ---
+31513 +++ killed by SIGINT +++

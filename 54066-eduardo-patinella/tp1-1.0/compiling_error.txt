@@ -1,0 +1,5 @@
+/home/eduardo/Escritorio/Computacion2/tp1yo/cortar.c: In function ‘main’:
+/home/eduardo/Escritorio/Computacion2/tp1yo/cortar.c:79:5: error: ‘string’ undeclared (first use in this function)
+     string="hola";
+     ^
+/home/eduardo/Escritorio/Computacion2/tp1yo/cortar.c:79:5: note: each undeclared identifier is reported only once for each function it appears in

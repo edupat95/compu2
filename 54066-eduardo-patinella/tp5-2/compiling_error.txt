@@ -1,0 +1,3 @@
+/tmp/ccj4rej2.o: En la función `main':
+servidor.c:(.text+0x56b): referencia a `pthread_create' sin definir
+collect2: error: ld returned 1 exit status
